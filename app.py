@@ -39,7 +39,7 @@ def select_file():
     # Read the selected file into a DataFrame
     try:
         df = pd.read_csv(filepath)
-    except pd.errors.EmptyDataError:
+    except pd.errors.EmptyDataErrorc:
         # Handle missing headers
         response = messagebox.askyesno(
             "Missing Headers", "File is missing headers. Do you want to continue?")
@@ -183,7 +183,7 @@ sms_to_csv = tk.Button(root, text="CSV 2 SMS List", command=SMS_only)
 sms_to_csv.grid(column=1, row=5, sticky="w", padx=5, pady=5)
 
 # CSV Tools = CSV 2 Unite Wrangling Platfomr
-csv_to_workplacedivide = tk.Button(root, text="CSV 2 SMS List", command=workplacedivide)
+csv_to_workplacedivide = tk.Button(root, text="CSV Divide by Workplace", command=workplacedivide)
 csv_to_workplacedivide.grid(column=2, row=5, sticky="w", padx=5, pady=5)
 
 
